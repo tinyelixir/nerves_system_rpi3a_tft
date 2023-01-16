@@ -18,7 +18,10 @@ defmodule NervesSystemRpi3a.MixProject do
       description: description(),
       package: package(),
       deps: deps(),
-      aliases: [loadconfig: [&bootstrap/1]],
+      aliases: [
+        compile: ["tinyelixir.fwup_overlays", "compile"],
+        loadconfig: [&bootstrap/1]
+      ],
       docs: docs(),
       preferred_cli_env: %{
         docs: :docs,
@@ -70,7 +73,9 @@ defmodule NervesSystemRpi3a.MixProject do
       {:nerves_system_br, "1.22.1", runtime: false},
       {:nerves_toolchain_armv7_nerves_linux_gnueabihf, "~> 1.8.0", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
-      {:ex_doc, "~> 0.22", only: :docs, runtime: false}
+      {:ex_doc, "~> 0.22", only: :docs, runtime: false},
+
+      {:tinyelixir_tools, "~> 0.1", path: "../tinyelixir_tools"}
     ]
   end
 

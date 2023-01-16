@@ -50,7 +50,6 @@ dtoverlay=miniuart-bt
 # https://www.raspberrypi.org/documentation/computers/config_txt.html#overclocking.
 core_freq=250
 
-dtoverlay=waveshare35b-v2
 hdmi_force_hotplug=1
 hdmi_group=2
 hdmi_mode=1
